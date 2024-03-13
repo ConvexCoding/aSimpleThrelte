@@ -64,7 +64,7 @@
 <T.DirectionalLight position={[0, 0, 100]} intensity={0.2} />
 <T.AmbientLight intensity={0.5} /> />
 
-<!-- Mirror 1 -->
+<!-- Mirror 1 - rotate only about y axis for horizontal bend -->
 <T.Group position={[0, 0, 20]} visible={true}>
   <T.Group rotation={[0, -r45, 0]}>
     <T.Group rotation={[0, 0, 0]}>
@@ -77,37 +77,40 @@
 
 <!-- Mirror 2 -->
 <T.Group position={[20, 0, 20]} visible={true}>
-  <T.Group rotation={[-r45, r135, 0]}>
-    <T.Group rotation={[0, 0, 0]}>
-      <T.Group rotation={[0, 0, 0]}>
+  <T.Group rotation={[-r45, r45, 0]}>
+    <T.Group rotation={[0, r90, 0]}>
         <Element radius={5} ct={2} />
       </T.Group>
     </T.Group>
   </T.Group>
-</T.Group>
+
 
 <!-- Mirror 3 -->
 <T.Group position={[20, 30, 50]} visible={true}>
-  <T.Group rotation={[0, 0, 0]}>
-    <T.Group rotation={[0, 0, 0]}>
-      <T.Group rotation={[-r45, r45, 0]}>
+    <T.Group rotation={[-r45, 0, 0]}>
+      <T.Group rotation={[0, r45, 0]}>
         <Element radius={5} ct={1} />
       </T.Group>
     </T.Group>
   </T.Group>
-</T.Group>
 
 <!-- Mirror 4 -->
 <T.Group position={[0, 30, 50]} visible={true}>
   <T.Group rotation={[0, -r90, 0]}>
     <T.Group rotation={[-r45, 0, 0]}>
-      <T.Group rotation={[0, 0, 0]}>
         <Element radius={5} ct={1} />
-      </T.Group>
     </T.Group>
   </T.Group>
 </T.Group>
 
+<!-- Mirror 5 -->
+<T.Group position={[0, 0, 50]} visible={true}>
+  <T.Group rotation={[r90, 0, 0]}>
+    <T.Group rotation={[r45, 0, 0]}>
+        <Element radius={5} ct={1} />
+    </T.Group>
+  </T.Group>
+</T.Group>
 <!-- Image Plane -->
 <T.Group position={[20, 0, 50]} visible={false}>
   <T.Group rotation={[0, 0, 0]}>
