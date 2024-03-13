@@ -87,8 +87,8 @@
 
 <!-- Mirror 3 -->
 <T.Group position={[20, 30, 50]} visible={true}>
-    <T.Group rotation={[-r45, 0, 0]}>
-      <T.Group rotation={[0, r45, 0]}>
+    <T.Group rotation={[r45, r90, 0]}>
+      <T.Group rotation={[-r45, 0, 0]}>
         <Element radius={5} ct={1} />
       </T.Group>
     </T.Group>
@@ -96,8 +96,8 @@
 
 <!-- Mirror 4 -->
 <T.Group position={[0, 30, 50]} visible={true}>
-  <T.Group rotation={[0, -r90, 0]}>
-    <T.Group rotation={[-r45, 0, 0]}>
+  <T.Group rotation={[0, 0, -r45]}>
+    <T.Group rotation={[0, -r90, 0]}>
         <Element radius={5} ct={1} />
     </T.Group>
   </T.Group>
@@ -105,12 +105,13 @@
 
 <!-- Mirror 5 -->
 <T.Group position={[0, 0, 50]} visible={true}>
-  <T.Group rotation={[r90, 0, 0]}>
-    <T.Group rotation={[r45, 0, 0]}>
+  <T.Group rotation={[r45, 0, 0]}>
+    <T.Group rotation={[r90, 0, 0]}>
         <Element radius={5} ct={1} />
     </T.Group>
   </T.Group>
 </T.Group>
+
 <!-- Image Plane -->
 <T.Group position={[20, 0, 50]} visible={false}>
   <T.Group rotation={[0, 0, 0]}>
